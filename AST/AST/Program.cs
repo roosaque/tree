@@ -2,7 +2,7 @@
 
 public abstract class AstNode
 {
-    public int Value { get; protected set; }
+   
     public abstract void Accept(IVisitor visitor);
     public abstract void Print();
     public abstract int Compute(); // Изменено на возвращение значения
@@ -10,6 +10,7 @@ public abstract class AstNode
 
 public class NumberNode : AstNode
 {
+    public int Value { get; protected set; }
     public NumberNode(int value)
     {
         Value = value;
